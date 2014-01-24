@@ -1,0 +1,15 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Make gists full screened",
+  "version": "1.0.0",
+  "description": "Makes gist files easy to full screen",
+  "web_accessible_resources": ["jquery.min.map"],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["http://github.cerner.com/gist/*/*", "https://gist.github.com/*/*"],
+      "js": ["jquery.min.js", "fullscreen_gist.user.js"]
+    }
+  ]
+}
